@@ -10,7 +10,7 @@ require 'database.php';
 $message = '';
 
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
-	
+
     $records = $conn->prepare('SELECT id, email, password,name FROM users WHERE email = :email');
     $records->bindParam(':email', $_POST['email']);
     if($records->execute()){
@@ -63,7 +63,7 @@ if (!empty($_POST['email_r']) && !empty($_POST['password_r']) && !empty($_POST['
   <?php if(!empty($message)): ?>
       <p> <?= $message ?></p>
  <?php endif; ?>
-    <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
+    <a href="/index.php">Inicio</a>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="login.php" method="POST">
