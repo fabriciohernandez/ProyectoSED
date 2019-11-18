@@ -4,7 +4,7 @@
   require 'database.php';
 
   if (isset($_SESSION['user_id'])) {
-    $records = $conn->prepare('SELECT id, email, password FROM users WHERE id = :id');
+    $records = $conn->prepare('SELECT * FROM users WHERE id = :id');
     $records->bindParam(':id', $_SESSION['user_id']);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
@@ -55,15 +55,14 @@
                 </ul>
 
                 <?php if(!empty($user)): ?>
-                  <br> Welcome. <?= $user['email']; ?>
-                  <br>You are Successfully Logged In
+                  <h1 > Welcome. <?= $user['name']; ?>
+                  <h1>You are Successfully Logged In
                   <a href="logout.php">
                     Logout
                   </a>
                 <?php else: ?>
                   <form class="form-inline my-2 my-lg-0">
-                      <a href="login.php" class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">login</a>
-                      <a href="signup.php" class="btn btn-info my-2 my-sm-0 text-uppercase">sign up</a>
+                      <a href="login.php" class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">login or signup</a>
                   </form>
                 <?php endif; ?>
 
