@@ -2,7 +2,7 @@
 
 $server = 'localhost:3306';
 $username = 'root';
-$password = '';
+$password = 'Server2019';
 $database = 'db_jdz';
 
 try {

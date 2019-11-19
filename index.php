@@ -413,9 +413,6 @@
                                 <li class="nav-item"><a class="nav-link" href="#">PS4</a></li>
                             </ul>
                         </div>
-                        <div class="col-12">
-                            <p>&copy; 2019. All Rights Reserved. Design by <a href="https://gettemplates.co" target="_blank">GetTemplates</a>.</p>
-                        </div>
                     </div>
                 </div>
             </div>
