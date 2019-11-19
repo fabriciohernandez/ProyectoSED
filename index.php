@@ -2,6 +2,15 @@
   session_start();
 
   require 'database.php';
+  $user = null;
+  $name_1 = "Ana";
+  $meess_1 = "Informacion de ultima Hora";
+  $name_2 = "Roberto";
+  $meess_2= "El mejor lugar para informarse sobre videojuegos";
+  $name_3 = "Ricardo";
+  $meess_3 = "Me encanta pokemon";
+  $name_4 = "Liza";
+  $meess_4 = "Death Stranding es raro";
 
   if (isset($_SESSION['user_id'])) {
     $records = $conn->prepare('SELECT * FROM users WHERE id = :id');
@@ -9,12 +18,46 @@
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
 
-    $user = null;
+    
 
     if (count($results) > 0) {
       $user = $results;
     }
   }
+  if(!empty($user) && !empty($_POST['mensaje'])){
+    $sql = "INSERT INTO mensajes(nombre,mensaje) VALUES (:name,:mensaje)";
+    $stmt = $conn->prepare($sql);
+	$mensaje=$_POST['mensaje'];
+    $stmt->bindParam(':mensaje', $mensaje);
+	$name =$user['name'];
+	$stmt ->bindParam(':name',$name);
+    $stmt->execute();
+     
+  }
+  $records = $conn->prepare("SELECT * FROM mensajes order by id desc");
+  $records->execute();
+  $cont=1;
+  while($row=$records->fetch(PDO::FETCH_ASSOC)){
+        if($cont == 1){
+            $name_1 = $row['nombre'];
+            $meess_1 = $row['mensaje'];
+        }
+        if($cont == 2){
+            $name_2 = $row['nombre'];
+            $meess_2 = $row['mensaje'];
+        }
+        if($cont == 3){
+            $name_3 = $row['nombre'];
+            $meess_3 = $row['mensaje'];
+        }
+        if($cont == 4){
+            $name_4 = $row['nombre'];
+            $meess_4 = $row['mensaje'];
+        }
+        $cont = $cont + 1;
+  }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +99,6 @@
 
                 <?php if(!empty($user)): ?>
                   <h1 > Welcome. <?= $user['name']; ?>
-                  <h1>You are Successfully Logged In
                   <a href="logout.php">
                     Logout
                   </a>
@@ -254,41 +296,41 @@
     </div>
     <div class="container-fluid gtco-testimonials">
         <div class="container">
-            <h2>Lo que las personas dicen sobre nosotros.</h2>
+            <h2>Los Ultimos Mensajes</h2>
             <div class="owl-carousel owl-carousel1 owl-theme">
                 <div>
                     <div class="card text-center"><img class="card-img-top" src="images/customer1.jpg" alt="">
                         <div class="card-body">
-                            <h5>Lisa Gally <br/>
-                                <span> Project Manager </span></h5>
-                            <p class="card-text">“ Increible página, no tengo más palabras ” </p>
+                            <h5><?= $name_1; ?> <br/>
+                                 </h5>
+                            <p class="card-text"><?= $meess_1; ?> </p>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div class="card text-center"><img class="card-img-top" src="images/customer2.jpg" alt="">
                         <div class="card-body">
-                            <h5>Missy Limana<br/>
-                                <span> CEO Facebook </span></h5>
-                            <p class="card-text">“ El mejor lugar para informarse sobre videojuegos ” </p>
+                            <h5><?= $name_2; ?><br/>
+                                 </h5>
+                            <p class="card-text"><?= $meess_2; ?></p>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div class="card text-center"><img class="card-img-top" src="images/customer3.jpg" alt="">
                         <div class="card-body">
-                            <h5>Aana Brown<br/>
-                                <span> Clash Royale Boss </span></h5>
-                            <p class="card-text">“ Los amo ” </p>
+                            <h5><?= $name_3; ?><br/>
+                                </h5>
+                            <p class="card-text"><?= $meess_3; ?></p>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div class="card text-center"><img class="card-img-top" src="images/customer3.jpg" alt="">
                         <div class="card-body">
-                            <h5>Aana Brown<br/>
-                                <span>Clash Royale Boss  </span></h5>
-                            <p class="card-text">“ Los amo x2 ” </p>
+                            <h5><?= $name_4; ?><br/>
+                                </h5>
+                            <p class="card-text"><?= $meess_4; ?> </p>
                         </div>
                     </div>
                 </div>
@@ -335,8 +377,10 @@
             <div class="row">
                 <div class="col-lg-6" id="contact">
                     <h4 id="message"> Dejanos un mensaje </h4>
-                    <textarea class="form-control" placeholder="Message"></textarea>
-                    <a href="#" class="submit-button">ENVIAR<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <form method="POST" action="index.php">
+                        <input name="mensaje" class="form-control" type="text" placeholder="Message"></textarea>
+                        <button class="submit-button">ENVIAR<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </form>
                 </div>
                 <div class="col-lg-6">
                     <div class="row">

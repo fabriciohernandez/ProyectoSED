@@ -63,7 +63,7 @@ if (!empty($_POST['email_r']) && !empty($_POST['password_r']) && !empty($_POST['
   <?php if(!empty($message)): ?>
       <p> <?= $message ?></p>
  <?php endif; ?>
-    <a href="/index.php">Inicio</a>
+    <a href="index.php">Inicio</a>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="login.php" method="POST">
