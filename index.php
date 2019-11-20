@@ -166,7 +166,7 @@
                         <small>Cada nueva generación de Pokémon comienza con la misma pregunta: ¿Qué versión deberías obtener? Al igual que cada par de juegos de nueva generación anteriores, tanto Pokémon Sword como Shield ofrecen diferentes experiencias para los jugadores. Ninguno es tan drástico como las diferencias entre Pokémon Black y White , pero encontrarás diferentes Pokémon y encontrarás diferentes Gym Leaders dependiendo de la versión que juegues.
                         </small>
                     </p>
-                    <a href="#">Saber Más <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                    </div>
             </div>
         </div>
     </div>
@@ -177,7 +177,7 @@
                     <h2> Explora los temas<br/>
                         Que Te Ofrecemos</h2>
                     <p> JDFNews es la autoridad global en juegos de PC. Llevamos más de 20 años cubriendo los juegos de PC, y hoy continuamos con ese legado con ediciones impresas en todo el mundo y noticias, características, cobertura de deportes electrónicos, pruebas de hardware y reseñas de juegos las 24 horas del día en JDFNews.com, así como las principales publicaciones anuales. eventos que incluyen el PC Gaming Show en E3. </p>
-                    <a href="#">All Services <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                    </div>
                 <div class="col-lg-8">
                     <svg id="bg-services"
                          width="100%"
@@ -262,32 +262,32 @@
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">125</h5>
-                            <p class="card-text">Articulos Creados</p>
+                            <h5 class="card-title">Game Awards</h5>
+                            <p class="card-text">12 de diciembre 2019</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">200M</h5>
-                            <p class="card-text">Seguidores</p>
+                            <h5 class="card-title">Nominaciones</h5>
+                            <p class="card-text">Votaciones Abiertas</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">530</h5>
-                            <p class="card-text">Visitas por segundo</p>
+                            <h5 class="card-title">Smah Legends 2</h5>
+                            <p class="card-text">Diciembre 14-15</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">941</h5>
-                            <p class="card-text">Empresas Afiliadas</p>
+                            <h5 class="card-title">Pokemon Sword/Shield</h5>
+                            <p class="card-text">+15 millones de ventas</p>
                         </div>
                     </div>
                 </div>
@@ -347,7 +347,7 @@
                             <h5>Cyberpunk 2077 </h5>
                             <p class="card-text">Cyberpunk 2077 contará con una tecnología mucho más avanzada que con The Witcher 3 y un uso de esas herramientas más eficientes, asegura CD Projekt RED. El estudio polaco, que afronta ahora la recta final del desarrollo de su esperado nuevo videojuego, ha explicado en una entrevista con AusGamers cómo han renovado la transmisión de contenido.
                                 . . . </p>
-                            <a href="#">LEER MÁS <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                            </div>
                     </div>
                 </div>
                 <div>
@@ -356,7 +356,7 @@
                             <h5> Death Stranding </h5>
                             <p class="card-text">Durante la conferencia de Sony en la Electronic Entertainment Expo de 2016, Hideo Kojima describió el género del juego como un seudo-juego de acción, pero con elementos nuevos y diferentes. Lo comparó con el juego Metal Gear de 1987, que actualmente se considera como un videojuego de sigilo, pero que en aquel entonces fue catalogado como un juego de acción durante su lanzamiento debido a que el género de sigilo no existía.
                                 . . . </p>
-                            <a href="#">LEER MÁS <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                            </div>
                     </div>
                 </div>
                 <div>
@@ -365,7 +365,7 @@
                             <h5>Pokemon Sword/Shield</h5>
                             <p class="card-text">¡Si compras  Pokémon Sword  o  Pokémon Shield  antes del 15 de enero de 2020, puedes recibir un Gigantamax Meowth especial! *** A diferencia de otros que se encuentran en la región Galar, este Meowth puede Gigantamax para adquirir una apariencia imponente y alargada capaz de usar una poderosa apariencia G-Max Move! Este Meowth especial no puede evolucionar. Puede recibir este Meowth especial seleccionando la opción Obtener por Internet en Mystery Gift. ¡No te olvides de reclamar este Pokémon Scratch antes del 15 de enero de 2020!
                                 . . . </p>
-                            <a href="#">LEER MÁS <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                            </div>
                     </div>
                 </div>
 
